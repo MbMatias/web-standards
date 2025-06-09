@@ -1,0 +1,466 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #222;
+    color: #fff;
+}
+
+.top-bar {
+    background: #8c4700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 0 12px;
+    height: 48px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1em;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 48px;
+}
+
+.logo img {
+    height: 60px;         /* aumenta um pouco a logo */
+    width: auto;
+    margin-right: 18px;   /* aumenta o espaço da logo para o menu */
+    margin-left: 50px;     /* deixa a logo um pouco mais para a direita */
+    display: inline-block;
+    /* Garante que não ultrapasse o topo */
+    max-height: 48px;
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 0.98em;
+    padding: 0 8px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+    background: none;
+    font-weight: normal;
+    line-height: 48px;
+}
+
+.menu a:hover:not(.cta) {
+    color: #ff9800;
+    background: none;
+    text-decoration: underline;
+}
+
+.menu .cta {
+    background: #ff9800;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 8px 14px;
+    text-decoration: none;
+    margin-left: 12px;
+    line-height: normal;
+}
+
+.hero {
+    background: #222 url('caminho/para/imagem-hero.jpg') center/cover no-repeat;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Necessário para posicionamento absoluto do texto */
+}
+
+.hero img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+    filter: brightness(0.5); /* Deixa a imagem mais escura */
+}
+
+.hero h1 {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+}
+
+.about {
+    background: linear-gradient(180deg, #3a6fa1 0%, #5bb0e6 100%);
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.about-content {
+    display: flex;
+    background: rgba(0,0,0,0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px #0002;
+    max-width: 900px;
+    width: 90%;
+    padding: 32px;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+.about-image {
+    min-width: 220px;
+    min-height: 180px;
+    background: #eeeeee00 url('caminho/para/imagem-grupo.jpg') center/cover no-repeat;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0);
+    flex-shrink: 0;
+}
+
+.about-image img {
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-text h2 {
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0 0 18px 0;
+    font-weight: bold;
+}
+
+.about-text p {
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.divider {
+    height: 32px;
+    background: #e86c0c;
+    margin-top: 0;
+}
+
+.how-we-act {
+    background: #5bb0e6;
+    padding: 40px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.how-content {
+    display: flex;
+    max-width: 1100px;
+    width: 90%;
+    gap: 32px;
+    align-items: flex-start;
+    margin-bottom: 0;
+}
+
+.how-image {
+    min-width: 280px;
+    min-height: 180px;
+    background: #eeeeee00 url('caminho/para/imagem-atuacao.jpg') center/cover no-repeat;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0);
+    flex-shrink: 0;
+}
+
+.how-image img {
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.how-text {
+    color: #222;
+    font-size: 1.05em;
+}
+
+.how-text h3 {
+    margin-top: 0;
+    color: #222;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.how-text ul {
+    margin-top: 12px;
+    margin-bottom: 0;
+    padding-left: 20px;
+    color: #222;
+}
+
+.activities {
+    background: #5bb0e6;
+    padding: 32px 0 48px 0;
+    text-align: center;
+}
+
+.activities h2 {
+    color: #fff;
+    font-size: 1.4em;
+    margin-bottom: 28px;
+    font-weight: bold;
+}
+
+.activities-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+
+.activity-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px #0002;
+    width: 150px;
+    padding: 12px 8px 8px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.activity-card:hover {
+    transform: translateY(-4px) scale(1.03);
+}
+
+.activity-img {
+    width: 140px;
+    height: 110px;
+    background: #fff;
+    border-radius: 12px;
+    margin: 0 auto 8px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 2px 8px #0001;
+}
+
+.activity-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.activity-card span {
+    display: block;
+    color: #e86c0c;
+    font-weight: bold;
+    font-size: 1.08em;
+    margin-top: 4px;
+    text-align: center;
+    background: none;
+}
+
+/* Adicionado para o popover */
+.popover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popover-content {
+    background: #333;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 24px #0002;
+}
+
+#popover-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+/* Overlay para escurecer o fundo */
+.activity-popover-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 2000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Popover lateral */
+.activity-popover {
+    background: #333;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px #0005;
+    width: 420px;
+    min-height: 240px;
+    margin-top: 40px;
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 36px 28px 36px 28px;
+    animation: popin 0.2s;
+}
+@keyframes popin {
+    from { transform: translateX(40px) scale(0.98); opacity: 0.5; }
+    to { transform: translateX(0) scale(1); opacity: 1; }
+}
+.activity-popover-img {
+    display: flex;
+    align-items: flex-start; /* Alinha a imagem no topo do popover */
+    justify-content: center;
+    width: 95%;
+    height: 180px;
+    margin: 0 auto 18px auto;
+    background: #222;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.activity-popover-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.activity-popover-content h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.2em;
+    color: #ff9800;
+}
+.activity-popover-content p {
+    font-size: 1em;
+    color: #fff;
+    margin: 0;
+}
+.activity-popover-close {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    color: #ff9800;
+    font-size: 1.5em;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 2;
+}
+
+/* Exemplo de responsividade para suas seções principais */
+
+/* Layout padrão (desktop) já está OK pelo seu código atual */
+
+/* Tablets */
+@media (max-width: 900px) {
+    .about-content, .how-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .about-image, .how-image {
+        width: 90%;
+        min-width: 180px;
+        min-height: 120px;
+    }
+    .activities-list {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .activity-card, .activity-popover {
+        width: 80vw;
+        min-width: 180px;
+        max-width: 420px;
+    }
+    .activity-popover-img {
+        height: 140px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .top-bar, .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 12px;
+    }
+    .menu {
+        gap: 8px;
+        width: 100%;
+    }
+    .about-content, .how-content {
+        flex-direction: column;
+        padding: 12px;
+        gap: 16px;
+    }
+    .about-image, .how-image {
+        width: 100%;
+        min-width: 120px;
+        min-height: 80px;
+    }
+    .activities-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .activity-card, .activity-popover {
+        width: 98vw;
+        min-width: 120px;
+        max-width: 98vw;
+        padding: 18px 2vw;
+    }
+    .activity-popover-img {
+        height: 110px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .activity-popover {
+        width: 99vw;
+        min-width: 0;
+        padding: 10px 1vw;
+    }
+    .activity-popover-img {
+        height: 90px;
+    }
+}
+
+.activity-popover.popover-leitura,
+.activity-popover.popover-digital {
+    margin-top: 90px;
+}
